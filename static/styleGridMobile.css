@@ -1,0 +1,172 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu */
+nav{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cyan;
+    border-style: solid;
+    border-width: 0.5px;
+    height: 12vh;
+}
+
+nav>ol {
+    display: grid;
+    grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    list-style: none;
+    min-height: 100px;
+}
+
+nav>ol>li {
+    padding: 6%;
+    border-style: solid;
+    border-width: 0.5px;
+}
+
+nav>ol>li>a{
+    font-size: xx-large;
+} 
+
+.logo{
+    margin-right: 10%;
+    border-style: solid;
+    border-width: 0.5px;
+    background-color: white;
+    padding: 1%;
+}
+
+/* Center */
+.center>div{
+    padding: 30px;
+    font-size: large;
+}
+
+
+.center{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "first second fourth fifts"
+    "third third fourth fifts" 
+    ;
+    min-height: 75vh;
+}
+
+.center>div{
+    border-style: solid;
+    border-width: 0.5px;
+}
+
+.first{
+grid-area: first;
+margin-right: 5%;   
+background-color: aquamarine;
+}
+
+.second{
+    grid-area: second;
+    margin-right: 5%;    
+    background-color: white;
+}
+
+.third{
+grid-area: third;
+margin-right: 2.5%;
+background-color: orange;
+}
+
+.fourth{
+    grid-area: fourth;
+    margin-right: 5%;
+    background-color: aquamarine;
+}
+
+.fifts{
+    grid-area: fifts;
+    background-color: white;
+}
+
+/* End */
+
+.end{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    min-height: 12vh;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-width: 0.5px;
+    background-color: cyan;
+}
+
+.textsize{
+    padding: 30px;
+    margin: 0;
+    font-size: large;
+}
+
+.endlogo{
+    margin-left: 10%;
+    border-style: solid;
+    border-width: 0.5px;
+    background-color: white;
+    padding: 1%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 700px){
+    body{
+        grid-template-rows: 0fr 13fr;
+    }
+    nav>ol {
+        grid-template-columns: 17% 17% 17% 17% 17% 16%;
+        margin-block-start: 0em;
+        padding-inline-start: 1px;
+    }
+    nav>ol>li>a{
+        font-size: medium;
+    } 
+    .textsize{
+        padding: 5px;
+        margin: 0;
+        font-size: medium;
+    }
+    .center>div{
+        padding: 5px;
+        font-size: medium;
+        margin: 0px;
+    }
+    .center{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        "first second"
+        "third third" 
+        "fourth fifts"
+        "fourth fifts"
+        ;
+    }
+    .logo{
+        margin-right: 2%;
+        border-style: solid;
+        border-width: 0.5px;
+        background-color: white;
+        padding: 1%;
+    }
+    h2{
+      font-size: 1em;  
+    }
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 1100px){
+    nav>ol>li>a{
+        font-size: large;
+    } 
+    nav>ol {
+        grid-template-columns: 10% 10% 10% 10% 10% 10%;
+    }
+  }
